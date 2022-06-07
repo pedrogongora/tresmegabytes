@@ -1,0 +1,201 @@
+/* -------- GENERAL ---------- */
+
+html,body {
+  margin: 0px;
+  height: 100%;
+  font-family: 'Lato', arial, sans-serf;
+  font-size: 15px;
+  font-size: 100%;
+  color: black;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+#pulse {
+  position: fixed;
+  top: 0;
+  left: 0;
+  -webkit-backface-visibility: hidden;
+}
+
+#resultList {
+  height: 100%;
+}
+
+#blank {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: white;
+}
+
+#blank-inner {
+  position: relative;
+  top: 45%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+#modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.8);
+}
+
+.modal-content {
+  position: fixed;
+  top: 8%;
+  left: 8%;
+  margin: 0;
+  background-color: #fefefe;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  height: 80%;
+}
+
+.close {
+  position: fixed;
+  top: 10px;
+  left: 15px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #aaa;
+}
+
+.close:hover,
+.close:focus {
+  text-decoration: none;
+  cursor: pointer;
+  color: white;
+}
+
+#contenidoExterno {
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#iframeLoading {
+  display: none;
+  position: absolute;
+  top:0;
+  left: 0;
+  z-index: 115;
+  width: 100%;
+  padding: 30px 0px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.container-about {
+  box-sizing: border-box;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: auto;;
+}
+
+#circles {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#titulo {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 50px 20px 20px 20px;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#ficha {
+  box-sizing: border-box;
+  width: 100%;
+  text-align: center;
+}
+
+#ficha-inner {
+  display: inline-block;;
+  width: 50%;
+  max-width: 600px;
+  text-align: left;
+}
+
+#ficha-inner p {
+  padding-bottom: 7px;
+}
+
+#ficha-inner i {
+  font-style: italic;
+}
+
+#cc {
+  position: fixed;
+  bottom: 3px;
+  right: 5px;
+}
+
+
+/* -------- CONTENIDO ---------- */
+
+.vertical-text {
+  height: 18px;
+  bottom: 0%;
+  transform: rotate(270deg);
+  transform-origin: bottom left 0;
+  float: left;
+  overflow: hidden;
+  word-wrap: normal;
+  font-size: 13px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background-color: white;
+  color: white;
+}
+
+.normalBar {
+  background-color: #f0f0f0;
+  color: #999;
+}
+
+.normalBar:hover {
+  cursor: pointer;
+  color: #666;
+}
+
+.spottedBar {
+  background-color: #FF6600;
+  color: #742F00;
+}
+
+.spottedBar:hover {
+  cursor: pointer;
+  color: #301502;
+}
+
+canvas:hover {
+  cursor: pointer;
+}

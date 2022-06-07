@@ -1,0 +1,32 @@
+<?php
+# Google Custom Search PHP code
+# This script can be setted in CRON to run once every week
+# You'll need to register a search api key
+$url = "https://www.googleapis.com/customsearch/v1?key=XXXXXXXXX";
+$start = 1;
+$max = 500;
+
+$a = array();
+$ok = true;
+do {
+  $json = file_get_contents($url.$start);
+  if ($json) {
+    $google = json_decode($json);
+    foreach ($google->items as $item) {
+      $a[] = $item->link;
+    }
+    if( isset($google->queries->nextPage) && count($a) < $max ) {
+      $start = $google->queries->nextPage[0]->startIndex;
+    } else {
+      $ok = false;
+    }
+  } else {
+    $ok = false;
+  }
+} while ($ok);
+
+
+$f = fopen("list.txt", "w");
+fwrite($f, json_encode($a));
+fclose($f);
+?>
